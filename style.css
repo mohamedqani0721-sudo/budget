@@ -1,0 +1,270 @@
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap');
+
+/* ==============================
+   Color Palette
+   ============================== */
+:root {
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --secondary: #0f766e;
+    --background: #f1f5f9;
+    --card: #ffffff;
+    --text: #1e293b;
+    --muted: #64748b;
+    --border: #cbd5e1;
+    --table-header: #2563eb;
+    --table-alt: #f8fafc;
+    --success: #16a34a;
+    --success-dark: #15803d;
+}
+
+/* ==============================
+   General Page Styling
+   ============================== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* ==============================
+   Header Card
+   ============================== */
+header {
+    text-align: center;
+    background-color: var(--primary);
+    color: white;
+    padding: 35px 20px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1000px;
+    border-radius: 16px;
+    border: 1px solid var(--primary-dark);
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+}
+
+header img {
+    vertical-align: middle;
+    margin-bottom: 10px;
+}
+
+header h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    margin: 5px 0;
+}
+
+header p {
+    margin: 5px 0 0;
+    color: #e0e7ff;
+}
+
+/* ==============================
+   Main Container
+   ============================== */
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+/* ==============================
+   Section Cards
+   ============================== */
+.add-expense-section,
+.expenses-section,
+.instructions,
+.multimedia {
+    background-color: var(--card);
+    padding: 30px;
+    margin-bottom: 30px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+}
+
+h2 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text);
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+/* ==============================
+   Add Expense Form
+   ============================== */
+.add-expense-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-weight: 600;
+    color: var(--text);
+    margin-top: 5px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 12px 14px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    color: var(--text);
+    background-color: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* ==============================
+   Button
+   ============================== */
+button {
+    background-color: var(--success);
+    color: white;
+    border: 1px solid var(--success);
+    padding: 13px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 12px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: var(--success-dark);
+    transform: translateY(-1px);
+}
+
+/* ==============================
+   Expense Table
+   ============================== */
+.expenses-section {
+    overflow-x: auto;
+}
+
+.expenses-section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background-color: white;
+}
+
+th,
+td {
+    border: 1px solid var(--border);
+    padding: 14px 16px;
+    text-align: left;
+}
+
+th {
+    background-color: var(--table-header);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--table-alt);
+}
+
+tbody tr:hover {
+    background-color: #dbeafe;
+}
+
+/* ==============================
+   Instructions
+   ============================== */
+summary {
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: var(--primary-dark);
+}
+
+.instructions p {
+    color: var(--muted);
+    margin-bottom: 0;
+}
+
+/* ==============================
+   Multimedia
+   ============================== */
+.multimedia {
+    text-align: center;
+}
+
+.multimedia iframe {
+    width: 100%;
+    max-width: 560px;
+    border: 0;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+/* ==============================
+   Footer
+   ============================== */
+footer {
+    text-align: center;
+    background-color: var(--text);
+    color: white;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* ==============================
+   Responsive Design
+   ============================== */
+@media (max-width: 600px) {
+    header,
+    main {
+        width: 94%;
+    }
+
+    header {
+        padding: 25px 15px;
+    }
+
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    .add-expense-section,
+    .expenses-section,
+    .instructions,
+    .multimedia {
+        padding: 20px;
+    }
+
+    th,
+    td {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
